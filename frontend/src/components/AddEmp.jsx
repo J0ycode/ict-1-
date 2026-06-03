@@ -12,9 +12,9 @@ const AddEmp = () => {
         esalary:"",
 
     });
-    const inputHandler =(e)=>{
-        setInput({...input, [e.target.name]:e.target.value});
-        console.log(input);
+    const inputHandler = (e) => {
+        const { name, value } = e.target;
+        setInput((prev) => ({ ...prev, [name]: value }));
     };
     
     const submitHandler =()=>{
